@@ -1,5 +1,5 @@
 from sqlalchemy import text as sql
-from .llm_openai import embed_texts, chat_json
+from llm_openai import embed_texts, chat_json
 
 def ann_search(session, qvec, topk=20):
     rows = session.execute(sql("""
